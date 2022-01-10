@@ -12,7 +12,11 @@
   --header-border: #ececec;
   --box-shadow:rgba(0, 0, 0, 0.15);
   --box-shadow-btm: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
----filter-btm:#F5F4FA;
+  --box-shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --filter-btm:#F5F4FA;
+  --box-shadow-cards:0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --fill-cocial: #AFB1B8;
+  --footer-social:#f5f4fa;
 }
 
 body {
@@ -133,11 +137,29 @@ address {
 }
 .contact-link {
   color: var(--description-color);
+  display: flex;
 }
+
 .contact-link:hover,
-.contact-link:focus {
-  color: var(--alt-color);
+.contact-link:focus
+ {
+color: var(--alt-color);
 }
+.nav-link:hover .heder-icon-img,
+.nav-link:focus .heder-icon-img {
+  fill: var(--alt-color);
+}
+
+.heder-icon-container{
+ display: flex;
+margin-left: auto;
+}
+
+.heder-icon-img{
+  display: flex;
+  margin-right: 10px;
+}
+
 
 /* ============= Герой ВебСтудия =============*/
 .hero {
@@ -145,6 +167,13 @@ address {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  background-image:linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), 
+    url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .hero-title {
   font-weight: 900;
@@ -203,7 +232,24 @@ address {
   color: var(--maim-color);
   margin-bottom: 10px;
 }
+.company-img{
+height: 120px;
+width: 270px;
+display: flex;
+justify-content: center;
+ align-items: center;
+margin-bottom: 30px;
+background-color:var(--filter-btm)
+}
+.company-icon{
+  display: flex;
+justify-content: center;
+}
 
+
+
+
+* ============= Чем мы занимаемся==================*/
 .engaged {
   padding-top: 0;
 }
@@ -244,12 +290,14 @@ address {
 }
 .team-position {
   margin-top: 10px;
+  margin-bottom: 16px;
 }
 .team-list {
   display: flex;
   margin-left: -30px;
   margin-top: -30px;
   flex-wrap: wrap;
+  
 }
 .team-item{
   width:calc(100% / 4 - 30px);
@@ -260,7 +308,67 @@ address {
   border: 1px solid var(--border-color);
   padding-bottom: 30px;
   text-align: center;
+  box-shadow:var(--box-shadow-team)
 }
+.team-social-list{
+  display: flex;
+  justify-content: center;
+}
+.team-social-item + .team-social-item{
+  margin-left: 10px;
+}
+.team-social-link{
+  width: 44px;
+  height: 44px;
+  background-color: var(--heder-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.team-social-icon{
+  fill:var(--fill-cocial);
+}
+.team-social-link:hover,
+.team-social-link:focus{
+  background-color: var(--alt-color);
+}
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon{
+  fill: var(--heder-color);
+}
+/*==============Постоянные клиенты=====================*/
+
+.clients-list{
+  display: flex;
+  justify-content: center;
+}
+.clients-social-link{
+width: 170px;
+height: 92px;
+border: 1px solid var(--fill-cocial);
+border-radius: 4px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.clients-item + .clients-item {
+  margin-left: 30px;
+}
+.clients-social-icon{
+  fill:var(--fill-cocial);
+}
+.clients-social-link:hover,
+.clients-social-link:focus{
+  background-color: var(--heder-color);
+    border: 1px solid var(--alt-color);
+}
+.clients-social-link:hover .clients-social-icon,
+.clients-social-link:focus .clients-social-icon{
+  fill:var(--alt-color);
+}
+
 
 /*================ Футер========================*/
 
@@ -294,10 +402,59 @@ address {
 .link-footer:focus {
   color: var(--alt-color);
 }
-
 .footer-item:not(:last-child)
 {
   margin-bottom: 9px;
+}
+
+.wrap{
+  display: flex;
+  align-items: baseline;
+}
+.footer-right{
+  margin-left: 70px;
+  margin-bottom: 72px;
+}
+
+.footer-social-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--heder-color);
+}
+
+.footer-social-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+
+
+.footer-social-link{
+   display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  background-color:var(--description-color);
+  justify-content:center;
+  align-items: center;
+  border-radius: 50%;
+}
+.footer-social-item:not(:first-child){
+  margin-left: 10px;
+}
+
+.footer-social-icon{
+  fill:var(--footer-social);
+}
+.footer-social-link:hover,
+.footer-social-link:focus{
+  background-color:var(--alt-color);
 }
 
 /*============ Портфолио==================*/
@@ -329,6 +486,10 @@ border-radius: 4px;
   background: var(--alt-color);
   color: var(--heder-color);
   box-shadow:var(--box-shadow-btm);
+}
+.portfolio-cards-item:hover,
+.portfolio-cards-item:focus{
+  box-shadow:var(--box-shadow-cards);
 }
 
 .portfolio-title {
