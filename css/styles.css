@@ -192,7 +192,7 @@ margin-left: auto;
   color: var(--heder-color);
   background-color: var(--alt-color);
   cursor: pointer;
-  margin-top: 35px;
+  margin-top: 30px;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px var(--box-shadow);
@@ -291,7 +291,7 @@ justify-content: center;
      text-align: center;
   }
 .team-position {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .team-list {
   display: flex;
@@ -344,23 +344,23 @@ justify-content: center;
   display: flex;
   justify-content: center;
   margin-left: -30px;
-  margin-top: -50px;
+  margin-top: -30px;
   flex-wrap: wrap;
 }
 .clients-social-link{
-width: 170px;
 border: 1px solid var(--fill-cocial);
 border-radius: 4px;
 display: flex;
 justify-content: center;
 align-items: center;
+padding: 16px 32px;
 }
 
 
 .clients-item {
   width: calc(100% / 6 - 30px);
   margin-left: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .clients-social-icon{
